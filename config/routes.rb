@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'others_profiles/show'
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   get 'events/index'
   root 'events#index'
@@ -41,4 +42,6 @@ Rails.application.routes.draw do
       resources :events, only: %i[index]
     end
   end
+
+  resources :others_profiles, only: %i[show]
 end

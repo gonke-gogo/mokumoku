@@ -36,7 +36,7 @@ RSpec.describe "Profiles", type: :system do
     end
 
     context 'イベント主催者のプロフィールを閲覧できる' do
-      fit 'イベント主催者の名前をクリックすると、イベント主催者のhobby・profileが閲覧できる。' do
+      it 'イベント主催者の名前をクリックすると、イベント主催者のhobby・profileが閲覧できる。' do
         event
         login(new_user)
         visit root_path
